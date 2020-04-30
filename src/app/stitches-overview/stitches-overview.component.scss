@@ -1,3 +1,15 @@
+@import '~@angular/material/theming';
+
 :host ::ng-deep mat-card {
   margin: 0 0 25px 0;
+  // @include mat-elevation-transition;
+  // @include mat-elevation(2);
+
+  // :hover {
+  //   @include mat-elevation(8);
+  // }
+}
+
+a:link {
+  text-decoration: none;
 }
