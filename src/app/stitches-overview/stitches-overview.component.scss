@@ -13,3 +13,12 @@
 a:link {
   text-decoration: none;
 }
+
+.h-card {
+  border: 1px solid #000000;
+  display: grid;
+  grid: 150px / 150px auto auto;
+  img {
+    max-height:100%;
+  }
+}
