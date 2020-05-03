@@ -1,3 +1,8 @@
+<button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="accent">Accent</button>
+<button mat-raised-button color="warn">Warn</button>
+<button mat-raised-button disabled>Disabled</button>
+
 <div class="row">
   <div class="col col-lg-3 col-md-3 col-sm-12" *ngFor="let stitch of stitches">
     <a href="/{{stitch.id}}">
@@ -19,26 +24,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col col-lg-12 col-md-12 col-sm-12" *ngFor="let stitch of stitches">
-    <a href="/{{stitch.id}}">
-      <div class="h-card">
-        <div class="">
-          <img src="{{stitch.image}}" alt="{{stitch.name}}">
-        </div>
-        <div class="">
-          <h3>
-            {{stitch.name}}
-          </h3>
-        </div>
-        <div class="">
-          <button mat-button>
-            <mat-icon aria-hidden="false" aria-label="View Saved">bookmark_border</mat-icon> SAVE
-          </button>
-          <button mat-button>
-            <mat-icon aria-hidden="false" aria-label="View Stitch">arrow_forward</mat-icon> VIEW
-          </button>
-        </div>
-      </div>
-    </a>
+  <div class="col col-lg-12 col-md-12 col-sm-12">
+
   </div>
 </div>

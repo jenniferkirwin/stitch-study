@@ -15,14 +15,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { SearchbarComponent } from './searchbar/searchbar.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { StitchesListViewComponent } from './stitches-list-view/stitches-list-view.component';
+import { StitchesCardViewComponent } from './stitches-card-view/stitches-card-view.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     StitchesOverviewComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    StitchesListViewComponent,
+    StitchesCardViewComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
