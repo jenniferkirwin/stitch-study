@@ -1,30 +1,20 @@
-<button mat-raised-button color="primary">Primary</button>
-<button mat-raised-button color="accent">Accent</button>
-<button mat-raised-button color="warn">Warn</button>
-<button mat-raised-button disabled>Disabled</button>
-
 <div class="row">
-  <div class="col col-lg-3 col-md-3 col-sm-12" *ngFor="let stitch of stitches">
-    <a href="/{{stitch.id}}">
-        <mat-card>
-          <mat-card-header>
-            <mat-card-title>{{stitch.name}}</mat-card-title>
-          </mat-card-header>
-          <img mat-card-image src="{{stitch.image}}" alt="{{stitch.name}}">
-          <mat-card-actions>
-            <button mat-button>
-              <mat-icon aria-hidden="false" aria-label="View Saved">bookmark_border</mat-icon> SAVE
-            </button>
-            <button mat-button>
-              <mat-icon aria-hidden="false" aria-label="View Stitch">arrow_forward</mat-icon> VIEW
-            </button>
-          </mat-card-actions>
-        </mat-card>
-    </a>
+  <div class="col col-lg-9 col-md-9 col-sm-12">
+    <mat-form-field appearance="outline">
+      <mat-label>Search Stitches</mat-label>
+      <input matInput placeholder="Placeholder">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="col col-lg-3 col-md-3 col-sm-12">
+    <button mat-button (click)="changeView('list')">
+      <mat-icon aria-hidden="false" aria-label="View List">view_list</mat-icon> List View
+    </button>
+    <button mat-button (click)="changeView('card')">
+      <mat-icon aria-hidden="false" aria-label="View Thumbnails">view_module</mat-icon> Thumbnail View
+    </button>
   </div>
 </div>
-<div class="row">
-  <div class="col col-lg-12 col-md-12 col-sm-12">
 
-  </div>
-</div>
+<app-stitches-card-view *ngIf="card"></app-stitches-card-view>
+<app-stitches-list-view *ngIf="list"></app-stitches-list-view>
