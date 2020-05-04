@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@import '~@angular/material/theming', 'src/assets/styles/base-colors.scss';
 
 :host ::ng-deep mat-card {
   margin: 0 0 25px 0;
@@ -13,12 +13,9 @@
 a:link {
   text-decoration: none;
 }
-
-.h-card {
-  border: 1px solid #000000;
-  display: grid;
-  grid: 150px / 150px auto auto;
-  img {
-    max-height:100%;
-  }
+// styling the search bar
+// -------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+:host ::ng-deep mat-form-field {
+  display: block;
 }
