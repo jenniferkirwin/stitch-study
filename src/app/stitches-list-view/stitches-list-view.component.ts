@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Stitch } from '../stitch';
 
 @Component({
   selector: 'app-stitches-list-view',
@@ -11,5 +12,7 @@ export class StitchesListViewComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Input() stitches: Stitch[];
 
 }

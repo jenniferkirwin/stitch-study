@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Stitch } from '../stitch';
 import { StitchService } from '../stitch.service';
 
-export type StitchView = 'card' | 'list';
+export type viewOptions = 'card' | 'list';
 
 @Component({
   selector: 'app-stitches-overview',
@@ -25,7 +25,7 @@ export class StitchesOverviewComponent implements OnInit {
     this.getStitches();
   }
 
-  activeView: string = 'card';
+  activeView: viewOptions = 'card';
   card: boolean = true;
   list: boolean = !this.card;
 
