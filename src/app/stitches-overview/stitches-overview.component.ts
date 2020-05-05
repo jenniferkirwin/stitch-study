@@ -12,6 +12,7 @@ export type viewOptions = 'card' | 'list';
 
 export class StitchesOverviewComponent implements OnInit {
 
+  view: viewOptions = 'card';
   stitches: Stitch[];
 
   constructor(private stitchService: StitchService) { }
@@ -25,17 +26,9 @@ export class StitchesOverviewComponent implements OnInit {
     this.getStitches();
   }
 
-  activeView: viewOptions = 'card';
-  card: boolean = true;
-  list: boolean = !this.card;
-
-  changeView(viewType):void {
-    if (this.activeView === viewType) {
-      return;
-    }
-    this.activeView = viewType;
-    this.card = !this.card;
-    this.list = !this.list;
-  };
+  removeVal(): void {
+    console.log(this.stitches)
+    this.stitches.pop();
+  }
 
 }
