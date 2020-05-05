@@ -7,14 +7,19 @@
     </mat-form-field>
   </div>
   <div class="col col-lg-3 col-md-3 col-sm-12">
-    <button mat-button (click)="changeView('list')">
+    <button mat-button (click)="view = 'list'">
       <mat-icon aria-hidden="false" aria-label="View List">view_list</mat-icon> List View
     </button>
-    <button mat-button (click)="changeView('card')">
+    <button mat-button (click)="view = 'card'">
       <mat-icon aria-hidden="false" aria-label="View Thumbnails">view_module</mat-icon> Thumbnail View
+    </button>
+    <button mat-button (click)="removeVal()">
+      Remove Value Test
     </button>
   </div>
 </div>
 
-<app-stitches-card-view *ngIf="card" [stitches]="stitches"></app-stitches-card-view>
-<app-stitches-list-view *ngIf="list" [stitches]="stitches"></app-stitches-list-view>
+<ng-container [ngSwitch]="view">
+  <app-stitches-card-view *ngSwitchDefault [stitches]="stitches"></app-stitches-card-view>
+  <app-stitches-list-view *ngSwitchCase="'list'" [stitches]="stitches"></app-stitches-list-view>
+</ng-container>
